@@ -15,9 +15,12 @@
 @property (nonatomic,strong) UIColor *minColor;
 @property (nonatomic,strong) UIColor *maxColor;
 @property (nonatomic,assign) CGFloat progress;//0~1
+@property (nonatomic,assign) CGFloat insert;//进度条的长度缩进
 
 -(void)setUp;//配置
 -(void)addView:(UIView *)view atProgress:(CGFloat)progress;//添加view
+-(void)addIndicatorView:(UIView *)indicatorView atProgress:(CGFloat)progress;//添加指示器
+-(void)addMarkView:(UIView *)indicatorVIew atProgress:(CGFloat)progress offsetY:(CGFloat)offsetY;//添加指示view
 -(void)setCorner;//圆角
 
 @end

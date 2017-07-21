@@ -9,6 +9,9 @@
 #import "ViewController.h"
 
 #import "HSFProgressView.h"
+#import "NSString+Size.h"
+
+#import "DemoVC2.h"
 
 @interface ViewController ()
 
@@ -28,6 +31,7 @@
     self.progressView.progressViewHeight = 10;
     self.progressView.minColor = [[UIColor redColor] colorWithAlphaComponent:1.0];
     self.progressView.maxColor = [UIColor lightGrayColor];
+    
     self.progressView.backgroundColor = [UIColor orangeColor];
     self.progressView.center = CGPointMake(self.view.frame.size.width/2, self.progressView.center.y);
     [self.progressView setUp];//在设置完属性后必须setUp
@@ -59,10 +63,22 @@
     
 }
 
+
+
+
 - (IBAction)sliderACTION:(UISlider *)sender {
     self.progressView.progress = sender.value;
     self.progressLabel.text = [NSString stringWithFormat:@"%.2f",sender.value];
 }
+
+
+//点击查看demo2
+- (IBAction)demo2:(UIButton *)sender {
+    DemoVC2 *vc = [[DemoVC2 alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
 
 
 - (void)didReceiveMemoryWarning {

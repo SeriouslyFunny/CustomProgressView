@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E142EA61F21AD1A00A38103 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E142EA51F21AD1A00A38103 /* NSString+Size.m */; };
+		2E142EA91F21AE4D00A38103 /* DemoVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E142EA81F21AE4D00A38103 /* DemoVC2.m */; };
 		2EB609FC1F16296B00ECCCF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB609FB1F16296B00ECCCF2 /* main.m */; };
 		2EB609FF1F16296B00ECCCF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB609FE1F16296B00ECCCF2 /* AppDelegate.m */; };
 		2EB60A021F16296B00ECCCF2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB60A011F16296B00ECCCF2 /* ViewController.m */; };
@@ -17,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E142EA41F21AD1A00A38103 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
+		2E142EA51F21AD1A00A38103 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
+		2E142EA71F21AE4D00A38103 /* DemoVC2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC2.h; sourceTree = "<group>"; };
+		2E142EA81F21AE4D00A38103 /* DemoVC2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC2.m; sourceTree = "<group>"; };
 		2EB609F71F16296B00ECCCF2 /* HSFProgressViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSFProgressViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EB609FB1F16296B00ECCCF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2EB609FD1F16296B00ECCCF2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,6 +72,8 @@
 				2EB609FE1F16296B00ECCCF2 /* AppDelegate.m */,
 				2EB60A001F16296B00ECCCF2 /* ViewController.h */,
 				2EB60A011F16296B00ECCCF2 /* ViewController.m */,
+				2E142EA71F21AE4D00A38103 /* DemoVC2.h */,
+				2E142EA81F21AE4D00A38103 /* DemoVC2.m */,
 				2EB60A031F16296B00ECCCF2 /* Main.storyboard */,
 				2EB60A061F16296B00ECCCF2 /* Assets.xcassets */,
 				2EB60A081F16296B00ECCCF2 /* LaunchScreen.storyboard */,
@@ -86,6 +94,8 @@
 		2EB60A111F16298B00ECCCF2 /* HSFProgressView */ = {
 			isa = PBXGroup;
 			children = (
+				2E142EA41F21AD1A00A38103 /* NSString+Size.h */,
+				2E142EA51F21AD1A00A38103 /* NSString+Size.m */,
 				2EB60A121F1629A200ECCCF2 /* HSFProgressView.h */,
 				2EB60A131F1629A200ECCCF2 /* HSFProgressView.m */,
 			);
@@ -166,8 +176,10 @@
 			files = (
 				2EB60A021F16296B00ECCCF2 /* ViewController.m in Sources */,
 				2EB60A141F1629A200ECCCF2 /* HSFProgressView.m in Sources */,
+				2E142EA91F21AE4D00A38103 /* DemoVC2.m in Sources */,
 				2EB609FF1F16296B00ECCCF2 /* AppDelegate.m in Sources */,
 				2EB609FC1F16296B00ECCCF2 /* main.m in Sources */,
+				2E142EA61F21AD1A00A38103 /* NSString+Size.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +338,7 @@
 				2EB60A101F16296B00ECCCF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

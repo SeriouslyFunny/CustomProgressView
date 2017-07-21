@@ -8,6 +8,8 @@
 
 #import "HSFProgressView.h"
 
+
+
 @interface HSFProgressView ()
 
 @property (nonatomic,strong) NSMutableArray *viewsArr;
@@ -23,13 +25,10 @@
     }
     return self;
 }
-//重写frame
--(void)setFrame:(CGRect)frame{
-    [super setFrame:frame];
-}
+
 //配置
 -(void)setUp{
-    self.progressView = [[UIProgressView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.progressViewHeight)];
+    self.progressView = [[UIProgressView alloc]initWithFrame:CGRectMake(self.insert, 0, self.frame.size.width - self.insert*2, self.progressViewHeight)];
     CGAffineTransform transform = CGAffineTransformMakeScale(1.0, self.progressViewHeight/2.0);
     self.progressView.transform = transform;
     self.progressView.center = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
@@ -40,11 +39,21 @@
 }
 //添加view
 -(void)addView:(UIView *)view atProgress:(CGFloat)progress{
-    view.center = CGPointMake(self.progressView.frame.size.width * progress, self.progressView.center.y);
+    view.center = CGPointMake(self.insert + self.progressView.frame.size.width * progress, self.progressView.center.y);
     view.layer.masksToBounds = YES;
     view.layer.cornerRadius = view.frame.size.height/2;
     [self addSubview:view];
     [self.viewsArr addObject:view];
+}
+//添加指示器
+-(void)addIndicatorView:(UIView *)indicatorView atProgress:(CGFloat)progress{
+    indicatorView.center = CGPointMake(self.insert + self.progressView.frame.size.width * progress, self.progressView.center.y);
+    [self addSubview:indicatorView];
+}
+//添加指示view 
+-(void)addMarkView:(UIView *)indicatorVIew atProgress:(CGFloat)progress offsetY:(CGFloat)offsetY{
+    indicatorVIew.center = CGPointMake(self.insert + self.progressView.frame.size.width * progress, self.progressView.center.y + offsetY);
+    [self addSubview:indicatorVIew];
 }
 //设置progress
 -(void)setProgress:(CGFloat)progress{

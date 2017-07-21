@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h09-ha-mLO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,16 +33,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpH-Tr-DCx">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.51461714510000001" blue="0.02493947744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="53m-Uc-lAU"/>
+                                </constraints>
+                                <state key="normal" title="查看demo2"/>
+                                <connections>
+                                    <action selector="demo2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sUo-3t-x5u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OpH-Tr-DCx" secondAttribute="trailing" id="4db-5d-Gm5"/>
                             <constraint firstAttribute="trailing" secondItem="xNe-2B-NUx" secondAttribute="trailing" constant="20" id="7eF-kX-3yX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OpH-Tr-DCx" secondAttribute="bottom" id="80b-La-pJ7"/>
                             <constraint firstItem="h41-QS-VhL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AS1-Jq-yQ9"/>
                             <constraint firstItem="xNe-2B-NUx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="SlU-nt-Gyr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xNe-2B-NUx" secondAttribute="bottom" constant="100" id="Vc3-h5-H79"/>
                             <constraint firstItem="xNe-2B-NUx" firstAttribute="top" secondItem="h41-QS-VhL" secondAttribute="bottom" constant="50" id="grs-p2-J5N"/>
+                            <constraint firstItem="OpH-Tr-DCx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iSc-7L-aYV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="cTh-bn-HpM"/>
                     <connections>
                         <outlet property="progressLabel" destination="h41-QS-VhL" id="lDv-aO-a9h"/>
                         <outlet property="slider" destination="xNe-2B-NUx" id="ENr-bq-efI"/>
@@ -50,6 +65,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1026" y="-544"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ce9-f0-54b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h09-ha-mLO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hFR-70-L7G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="MVz-F0-gMd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X09-rk-OFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="-543.77811094452773"/>
         </scene>
     </scenes>
 </document>
