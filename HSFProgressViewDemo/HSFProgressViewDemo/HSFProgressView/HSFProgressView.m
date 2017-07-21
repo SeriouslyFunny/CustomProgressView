@@ -60,7 +60,7 @@
     _progress = progress;
     self.progressView.progress = progress;
     if (self.viewsArr.count > 0) {
-        __block CGFloat min_x = self.progressView.frame.size.width * progress;
+        __block CGFloat min_x = self.progressView.frame.size.width * progress + self.insert;
         [self.viewsArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             UIView *view = (UIView *)obj;
             view.backgroundColor = self.maxColor;
